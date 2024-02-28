@@ -1,0 +1,5 @@
+/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86/CMakeFiles/nativesqlite.dir
+/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86/CMakeFiles/tgnet.dir
+/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86/CMakeFiles/sqlite.dir
+/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86/CMakeFiles/edit_cache.dir
+/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86/CMakeFiles/rebuild_cache.dir

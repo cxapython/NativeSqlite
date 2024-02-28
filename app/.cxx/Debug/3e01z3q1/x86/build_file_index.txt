@@ -1,0 +1,1 @@
+/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/CMakeLists.txt

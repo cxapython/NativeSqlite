@@ -1,0 +1,39 @@
+{
+  "buildFiles": [
+    "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/chennan/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/chennan/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "nativesqlite::@6890427a1f51a3e7e1df": {
+      "artifactName": "nativesqlite",
+      "abi": "arm64-v8a",
+      "output": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libnativesqlite.so",
+      "runtimeFiles": []
+    },
+    "tgnet::@6890427a1f51a3e7e1df": {
+      "artifactName": "tgnet",
+      "abi": "arm64-v8a",
+      "output": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/arm64-v8a/libtgnet.a",
+      "runtimeFiles": []
+    },
+    "sqlite::@6890427a1f51a3e7e1df": {
+      "artifactName": "sqlite",
+      "abi": "arm64-v8a",
+      "output": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/arm64-v8a/libsqlite.a",
+      "runtimeFiles": []
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# ninja log v5
+2	577	1709131346124107087	CMakeFiles/tgnet.dir/tgnet/ByteArray.cpp.o	cf3e3fb52496b0de
+1	1182	1709131346728535521	CMakeFiles/nativesqlite.dir/native-lib.cpp.o	f0c25b6b6bea3e9a
+0	1229	1709131346774703021	CMakeFiles/nativesqlite.dir/SqliteWrapper.cpp.o	72f1408674f1c728
+1	1255	1709131346798805202	CMakeFiles/tgnet.dir/tgnet/BuffersStorage.cpp.o	9f147d7057649d9b
+1	1535	1709131347081176033	CMakeFiles/nativesqlite.dir/TgNetWrapper.cpp.o	68141b84d9cc7b3b
+1	1561	1709131347107523208	CMakeFiles/tgnet.dir/tgnet/ConnectionsManager.cpp.o	c6fe79393a2c384c
+1	1565	1709131347112304595	CMakeFiles/tgnet.dir/tgnet/NativeByteBuffer.cpp.o	797bdf84c0ddbee2
+1565	1716	1709131347270073000	libtgnet.a	6166dc7565752667
+3	18614	1709131364083570812	CMakeFiles/sqlite.dir/sqlite/sqlite3.c.o	32e005d2a67eeedb
+18614	18671	1709131364225709000	libsqlite.a	7695f3f9d0173547
+18671	18959	1709131364465627005	/Users/chennan/AndroidStudioProjects/NativeSqlite/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libnativesqlite.so	d260ea9d8392d2e
+1	436	1709131472211456510	CMakeFiles/nativesqlite.dir/SqliteWrapper.cpp.o	72f1408674f1c728
+2	602	1709131472378057296	CMakeFiles/nativesqlite.dir/TgNetWrapper.cpp.o	68141b84d9cc7b3b
+602	700	1709131472447220198	/Users/chennan/AndroidStudioProjects/NativeSqlite/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libnativesqlite.so	d260ea9d8392d2e
+2	877	1709133907322693849	CMakeFiles/nativesqlite.dir/TgNetWrapper.cpp.o	68141b84d9cc7b3b
+877	1146	1709133907552973973	/Users/chennan/AndroidStudioProjects/NativeSqlite/app/build/intermediates/cxx/Debug/3e01z3q1/obj/arm64-v8a/libnativesqlite.so	d260ea9d8392d2e

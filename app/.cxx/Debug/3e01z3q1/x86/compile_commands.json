@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86",
+  "command": "/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android26 --sysroot=/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DANDROID_ARMV6_IDCT -DANDROID_NDK -DANDROID_TILE_BASED_DECODE -DAVOID_TABLES -DDISABLE_IMPORTGL -DHAVE_STRCHRNUL=0 -DLOCALE_NOT_USED -DNULL=0 -DSOCKLEN_T=socklen_t -Dnativesqlite_EXPORTS -I/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/boringssl/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -fno-strict-aliasing -Os -o CMakeFiles/nativesqlite.dir/SqliteWrapper.cpp.o -c /Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/SqliteWrapper.cpp",
+  "file": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/SqliteWrapper.cpp"
+},
+{
+  "directory": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86",
+  "command": "/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android26 --sysroot=/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DANDROID_ARMV6_IDCT -DANDROID_NDK -DANDROID_TILE_BASED_DECODE -DAVOID_TABLES -DDISABLE_IMPORTGL -DHAVE_STRCHRNUL=0 -DLOCALE_NOT_USED -DNULL=0 -DSOCKLEN_T=socklen_t -Dnativesqlite_EXPORTS -I/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/boringssl/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -fno-strict-aliasing -Os -o CMakeFiles/nativesqlite.dir/TgNetWrapper.cpp.o -c /Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/TgNetWrapper.cpp",
+  "file": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/TgNetWrapper.cpp"
+},
+{
+  "directory": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86",
+  "command": "/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android26 --sysroot=/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DANDROID_ARMV6_IDCT -DANDROID_NDK -DANDROID_TILE_BASED_DECODE -DAVOID_TABLES -DDISABLE_IMPORTGL -DHAVE_STRCHRNUL=0 -DLOCALE_NOT_USED -DNULL=0 -DSOCKLEN_T=socklen_t -Dnativesqlite_EXPORTS -I/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/boringssl/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -fno-strict-aliasing -Os -o CMakeFiles/nativesqlite.dir/native-lib.cpp.o -c /Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/native-lib.cpp",
+  "file": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/native-lib.cpp"
+},
+{
+  "directory": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86",
+  "command": "/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android26 --sysroot=/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -I/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/boringssl/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/tgnet.dir/tgnet/ConnectionsManager.cpp.o -c /Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/tgnet/ConnectionsManager.cpp",
+  "file": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/tgnet/ConnectionsManager.cpp"
+},
+{
+  "directory": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86",
+  "command": "/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android26 --sysroot=/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -I/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/boringssl/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/tgnet.dir/tgnet/BuffersStorage.cpp.o -c /Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/tgnet/BuffersStorage.cpp",
+  "file": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/tgnet/BuffersStorage.cpp"
+},
+{
+  "directory": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86",
+  "command": "/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android26 --sysroot=/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -I/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/boringssl/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/tgnet.dir/tgnet/NativeByteBuffer.cpp.o -c /Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/tgnet/NativeByteBuffer.cpp",
+  "file": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/tgnet/NativeByteBuffer.cpp"
+},
+{
+  "directory": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86",
+  "command": "/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android26 --sysroot=/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -I/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/boringssl/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/tgnet.dir/tgnet/ByteArray.cpp.o -c /Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/tgnet/ByteArray.cpp",
+  "file": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/tgnet/ByteArray.cpp"
+},
+{
+  "directory": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/.cxx/Debug/3e01z3q1/x86",
+  "command": "/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=i686-none-linux-android26 --sysroot=/Users/chennan/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DANDROID_ARMV6_IDCT -DANDROID_NDK -DANDROID_TILE_BASED_DECODE -DAVOID_TABLES -DDISABLE_IMPORTGL -DHAVE_STRCHRNUL=0 -DLOCALE_NOT_USED -DNULL=0 -DSOCKLEN_T=socklen_t -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -fno-strict-aliasing -Os -o CMakeFiles/sqlite.dir/sqlite/sqlite3.c.o -c /Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/sqlite/sqlite3.c",
+  "file": "/Users/chennan/AndroidStudioProjects/NativeSqlite/app/src/main/cpp/sqlite/sqlite3.c"
+}
+]
