@@ -1,21 +1,29 @@
 package com.example.nativesqlite
 
+import MessageElement.Message.parseFrom
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import com.example.nativesqlite.SQLite.SQLiteCursor
 import com.example.nativesqlite.SQLite.SQLiteDatabase
-import com.example.nativesqlite.SQLite.SQLitePreparedStatement
 import com.example.nativesqlite.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val TABLE_NAME = "user"
+    private val coroutineScope = CoroutineScope(Dispatchers.Default)
+
     fun createTables(db: SQLiteDatabase) {
-
-
         //如果存在user_info表，则删除该表
         val drop_sql = "DROP TABLE IF EXISTS ${TABLE_NAME};"
         db.executeFast(drop_sql).stepThis().dispose();
@@ -38,6 +46,19 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+            if (ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_PERMISSION_CODE
+                )
+            }
+        }
 //        val helper = getInstance(this,2)
 //        val db= helper.openWriteLink()
 //        helper.onCreate(db)
@@ -47,22 +68,36 @@ class MainActivity : AppCompatActivity() {
 //        userInfo.name="zhangsan"
 //        helper.insert(userInfo)
         // Example of a call to a native method
-        val database = SQLiteDatabase("/data/data/com.example.nativesqlite/databases/user.db")
-//插入操作示例：待确认
-//        val state: SQLitePreparedStatement = database.executeFast("INSERT INTO user VALUES (?, ?, ?, ?,?,?)");
-//        state.requery();
-//        state.bindInteger(0,3)
-//        state.bindString(1,"xiaohong")
-//        state.bindInteger(2,30)
-//        state.bindLong(3,30L)
-//        state.bindDouble(4,30.0)
-//        state.step();
-//        state.dispose();
-        val cursor: SQLiteCursor = database.queryFinalized("SELECT name,age FROM user_info")
-        if (cursor.next()) {
-            val name = cursor.stringValue(0)
-            val age = cursor.intValue(1)
-            Log.d("NativeSql", "name:${name},age:${age}")
+        coroutineScope.launch {
+            withContext(Dispatchers.IO) {
+                val database =
+                    SQLiteDatabase("/storage/emulated/0/Download/plaintext_xxx.db")
+                val cursor: SQLiteCursor = database.queryFinalized(
+                    "SELECT \"40030\" as groupId,\"40033\" as nickId,\"40050\" as time , \"40093\" as nickName, \"40800\" as msgContent\n" +
+                            "FROM group_msg_table where time>? order by time;", 0
+                )
+                if (cursor.next()) {
+                    cursor.columnCount
+                    val groupId = cursor.stringValue(0)
+                    val qqId = cursor.stringValue(1)
+                    val time = cursor.intValue(2)
+                    val nickName = cursor.stringValue(3)
+                    val contentProtobbuf = cursor.byteArrayValue(4)
+                    val contentInfo: MessageElement.Message? =
+                        parseFrom(contentProtobbuf)
+                    val messages = contentInfo?.messagesList
+                    var messageText: String = ""
+                    if (messages != null) {
+                        for (message in messages) {
+                            if (message.messageType == 1) {
+                                messageText = message.messageText
+                                break
+                            }
+                        }
+                    }
+                    Log.d("NativeSql", "groupId:${groupId},qqId:${qqId}")
+                }
+            }
         }
 
 
@@ -80,5 +115,12 @@ class MainActivity : AppCompatActivity() {
         init {
             System.loadLibrary("nativesqlite")
         }
+        private val PERMISSIONS_STORAGE = arrayOf(
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CALL_PHONE,
+            Manifest.permission.SYSTEM_ALERT_WINDOW
+        )
+        private const val REQUEST_PERMISSION_CODE = 1
     }
 }

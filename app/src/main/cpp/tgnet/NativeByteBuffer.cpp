@@ -10,8 +10,21 @@
 #include <stdlib.h>
 #include "NativeByteBuffer.h"
 #include "ByteArray.h"
-#include "ConnectionsManager.h"
 #include "BuffersStorage.h"
+#include <string>
+#include <fcntl.h>
+
+#ifdef ANDROID
+
+#include <jni.h>
+JavaVM *javaVm = nullptr;
+jclass jclass_ByteBuffer = nullptr;
+jmethodID jclass_ByteBuffer_allocateDirect = nullptr;
+#endif
+
+static bool done = false;
+
+
 NativeByteBuffer::NativeByteBuffer(uint32_t size) {
 #ifdef ANDROID
     if (jclass_ByteBuffer != nullptr) {

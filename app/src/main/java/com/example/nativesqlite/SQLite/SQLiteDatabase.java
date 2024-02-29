@@ -10,6 +10,8 @@ package com.example.nativesqlite.SQLite;
 
 import android.util.Log;
 
+import java.io.File;
+
 public class SQLiteDatabase {
 
     private final long sqliteHandle;
@@ -23,7 +25,7 @@ public class SQLiteDatabase {
     }
 
     public SQLiteDatabase(String fileName) throws SQLiteException {
-        sqliteHandle = opendb(fileName, "/data/data/com.example.nativesqlite/databases");
+        sqliteHandle = opendb(fileName, new File(fileName).getParent());
         isOpen = true;
     }
 

@@ -16,37 +16,21 @@ project("nativesqlite")
 
 set(NATIVE_LIB "nativesqlite")
 
-add_library(crypto STATIC IMPORTED)
-set_target_properties(crypto PROPERTIES IMPORTED_LOCATION ${CMAKE_HOME_DIRECTORY}/boringssl/lib/libcrypto_${ANDROID_ABI}.a)
-
-add_library(ssl STATIC IMPORTED)
-set_target_properties(ssl PROPERTIES IMPORTED_LOCATION ${CMAKE_HOME_DIRECTORY}/boringssl/lib/libssl_${ANDROID_ABI}.a)
-# Creates and names a library, sets it as either STATIC
-# or SHARED, and provides the relative paths to its source code.
-# You can define multiple libraries, and CMake builds them for you.
-# Gradle automatically packages shared libraries with your APK.
-
-
 add_library( # Sets the name of the library.
         ${NATIVE_LIB}
         # Sets the library as a shared library.
         SHARED
-        #        SqliteWrapper.cpp
         SqliteWrapper.cpp
         TgNetWrapper.cpp
         # Provides a relative path to your source file(s).
         native-lib.cpp)
 
 add_library(tgnet STATIC
-        tgnet/ConnectionsManager.cpp
         tgnet/BuffersStorage.cpp
         tgnet/NativeByteBuffer.cpp
         tgnet/ByteArray.cpp
         )
-target_include_directories(tgnet PUBLIC
-        boringssl/include/)
-target_link_libraries(tgnet
-        crypto)
+
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
 # default, you only need to specify the name of the public NDK library
@@ -76,7 +60,6 @@ target_link_libraries( # Specifies the target library.
         ${NATIVE_LIB}
         sqlite
         tgnet
-
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib})

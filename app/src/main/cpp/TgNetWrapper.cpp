@@ -1,10 +1,6 @@
 #include <jni.h>
-//#include "tgnet/ApiScheme.h"
 #include "tgnet/BuffersStorage.h"
 #include "tgnet/NativeByteBuffer.h"
-#include "tgnet/ConnectionsManager.h"
-//#include "tgnet/MTProtoScheme.h"
-//#include "tgnet/ConnectionSocket.h"
 
 JavaVM *java;
 jlong getFreeBuffer(JNIEnv *env, jclass c, jint length) {
@@ -33,29 +29,14 @@ jobject getJavaByteBuffer(JNIEnv *env, jclass c, jlong address) {
     }
     return buffer->getJavaByteBuffer();
 }
-//void setJava(JNIEnv *env, jclass c, jboolean useJavaByteBuffers) {
-//    ConnectionsManager::useJavaVM(java, useJavaByteBuffers);
-//}
 static const char *NativeByteBufferClassPathName = "com/example/nativesqlite/tgnet/NativeByteBuffer";
 static JNINativeMethod NativeByteBufferMethods[] = {
-//        {"native_setJava", "(Z)V", (void *) setJava},
         {"native_getFreeBuffer", "(I)J", (void *) getFreeBuffer},
         {"native_limit", "(J)I", (void *) limit},
         {"native_position", "(J)I", (void *) position},
         {"native_reuse", "(J)V", (void *) reuse},
         {"native_getJavaByteBuffer", "(J)Ljava/nio/ByteBuffer;", (void *) getJavaByteBuffer}
 };
-
-void setJava(JNIEnv *env, jclass c, jboolean useJavaByteBuffers) {
-    ConnectionsManager::useJavaVM(java, useJavaByteBuffers);
-}
-
-static const char *ConnectionsManagerClassPathName = "com/example/nativesqlite/tgnet/ConnectionsManager";
-static JNINativeMethod ConnectionsManagerMethods[] = {
-        {"native_setJava", "(Z)V", (void *) setJava},
-};
-
-
 
 inline int registerNativeMethods(JNIEnv *env, const char *className, JNINativeMethod *methods, int methodsCount) {
     jclass clazz;
@@ -75,11 +56,6 @@ extern "C" int registerNativeTgNetFunctions(JavaVM *vm, JNIEnv *env) {
     if (!registerNativeMethods(env, NativeByteBufferClassPathName, NativeByteBufferMethods, sizeof(NativeByteBufferMethods) / sizeof(NativeByteBufferMethods[0]))) {
         return JNI_FALSE;
     }
-//    if (!registerNativeMethods(env, ConnectionsManagerClassPathName, ConnectionsManagerMethods, sizeof(ConnectionsManagerMethods) / sizeof(ConnectionsManagerMethods[0]))) {
-//        return JNI_FALSE;
-//    }
-
-
     return JNI_TRUE;
 }
 
